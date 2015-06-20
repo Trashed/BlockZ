@@ -24,14 +24,13 @@ function printDebugInfo()
 	
 	rem If debugging is activated, show debug info on the screen
 	if g_isDebugging = TRUE
-		setPrintSize( 3 )
-		
-		
+		setPrintSize( 3 )		
 		
 		print( "Last keycode: " + str( getRawLastKey() ) )
 		print( "FPS = " + left( str( screenFPS() ), 6 ) )
 		print( "W = " + str( g_DeviceWidth ) + ", H = " + str( g_DeviceHeight ) )
 		print( "Sprite count: " + str( getManagedSpriteCount() ) )
 		print( "Frame time: " + str( getFrameTime() ) )
+		print( "Accel.X : " + str(g_AccelX) + ", Accel.Y: " + str(g_AccelY) )
 	endif
 endfunction
