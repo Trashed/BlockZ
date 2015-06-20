@@ -1,0 +1,10 @@
+# Ignore executable
+*.exe
+
+# Ignore some project files
+*.cbp
+*.layout
+
+# Ignore these files in media folder
+*.byc
+media/SourceCode.txt
