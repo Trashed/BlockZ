@@ -15,5 +15,5 @@ width=720
 rem Specify the initial device height
 height=1280
 
-// Specify whether to use fullscreen mode
+rem Specify whether to use fullscreen mode
 fullscreen=0
