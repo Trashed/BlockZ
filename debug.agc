@@ -31,6 +31,7 @@ function printDebugInfo()
 		print( "W = " + str( g_DeviceWidth ) + ", H = " + str( g_DeviceHeight ) )
 		print( "Sprite count: " + str( getManagedSpriteCount() ) )
 		print( "Frame time: " + str( getFrameTime() ) )
+		print("Main loop exec time: " + str(g_AppExecTime))
 		print( "Accel.X : " + str(g_AccelX) + ", Accel.Y: " + str(g_AccelY) )
 	endif
 endfunction
