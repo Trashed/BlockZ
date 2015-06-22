@@ -23,12 +23,12 @@ function initPaddle()
 	tempPaddle.y = 95.0
 	tempPaddle.width = 20.0
 	tempPaddle.height = 3.0
-	tempPaddle.speed = 20
+	tempPaddle.speed = 25
 	
 	setSpriteSize(tempPaddle.id, tempPaddle.width, tempPaddle.height)
 	setSpriteOffset(tempPaddle.id, tempPaddle.width / 2, tempPaddle.height / 2)
 	setSpritePositionByOffset(tempPaddle.id, tempPaddle.x, tempPaddle.y)
-	setSpriteColor(tempPaddle.id, 255, 255, 0, 255)
+	setSpriteColor(tempPaddle.id, 78, 150, 78, 255)
 	setSpritePhysicsOn(tempPaddle.id, DYNAMIC)
 		
 endfunction tempPaddle
@@ -36,7 +36,8 @@ endfunction tempPaddle
 
 function movePaddle(time as float)
 	Paddle.x = Paddle.x + time * Paddle.speed * g_AccelX
-	setSpritePositionByOffset(Paddle.id, Paddle.x, Paddle.y)
+	rem setSpritePositionByOffset(Paddle.id, Paddle.x, Paddle.y)
+	setSpritePhysicsVelocity(Paddle.id, g_AccelX * Paddle.speed, 0)
 endfunction
 
 
