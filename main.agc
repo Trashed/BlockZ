@@ -10,6 +10,7 @@ rem ### Includes ###
 #include "controls.agc"
 #include "vector.agc"
 #include "paddle.agc"
+#include "ball.agc"
 #include "game.agc"
 
 
@@ -27,6 +28,7 @@ global g_AccelY as float
 
 rem global dim Blockz[10, 5] as t_Block
 global Paddle as t_Paddle
+global Ball as t_Ball
 
 
 rem Initialize application
@@ -45,6 +47,8 @@ do
 		case STATE_PREPARE_GAME
 			rem Init game objects
 			Paddle = initPaddle()
+			Ball = initBall()
+			
 			
 			setAppState(STATE_PLAYING)
 		endcase
