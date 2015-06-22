@@ -24,7 +24,7 @@ function printDebugInfo()
 	
 	rem If debugging is activated, show debug info on the screen
 	if g_isDebugging = TRUE
-		setPrintSize( 3 )		
+		setPrintSize( 2 )		
 		
 		print( "Last keycode: " + str( getRawLastKey() ) )
 		print( "FPS = " + left( str( screenFPS() ), 6 ) )
@@ -33,5 +33,6 @@ function printDebugInfo()
 		print( "Frame time: " + str( getFrameTime() ) )
 		print("Main loop exec time: " + str(g_AppExecTime))
 		print( "Accel.X : " + str(g_AccelX) + ", Accel.Y: " + str(g_AccelY) )
+		print("Is ball launched: " + str(g_IsBallLaunched))
 	endif
 endfunction

@@ -52,13 +52,22 @@ do
 			rem Init game objects
 			Paddle = initPaddle()
 			Ball = initBall()
-			
+			g_IsBallLaunched = FALSE
 			
 			setAppState(STATE_PLAYING)
 		endcase
 		case STATE_PLAYING:
 			rem Use frametime for updating sprites
 			t# = getFrameTime()
+			
+			
+			rem Launch the ball
+			if g_IsBallLaunched = FALSE
+				if getRawKeyPressed(SPACE_KEY)
+					launchBall()
+					g_IsBallLaunched = TRUE
+				endif
+			endif
 			
 			rem Update controls
 			updateDeviceDirection()

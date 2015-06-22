@@ -18,3 +18,6 @@ rem App states
 #constant STATE_MAIN_MENU		10
 #constant STATE_PREPARE_GAME	20
 #constant STATE_PLAYING			30
+
+rem Keycodes
+#constant SPACE_KEY	32
