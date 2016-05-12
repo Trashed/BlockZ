@@ -1,9 +1,9 @@
 # Ignore executable
 *.exe
+BlockZ
 
 # Ignore some project files
 *.cbp
-*.agk
 *.layout
 
 # Ignore these files in media folder
